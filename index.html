@@ -38,29 +38,53 @@
 
         /* Animated Gradient Text Effect */
         @keyframes shimmer {
-            0% {
-                background-position: 0% 50%;
-            }
-            100% {
-                background-position: 200% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
         }
 
         .text-gradient {
-            /* Creating a gradient that loops smoothly */
             background: linear-gradient(90deg, #0d9488, #22d3ee, #0d9488);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            /* Applying the infinite animation */
             animation: shimmer 3s linear infinite;
         }
+
+        /* Loading Dot Animation */
+        @keyframes blink {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+        
+        .dot {
+            display: inline-block;
+            animation: blink 1.4s infinite both;
+        }
+        
+        .dot:nth-child(1) { animation-delay: 0s; }
+        .dot:nth-child(2) { animation-delay: 0.2s; }
+        .dot:nth-child(3) { animation-delay: 0.4s; }
+
+        /* Animated Background Gradient */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .bg-animate {
+            /* Soft Teal, Cyan, and Sky Blue Gradient */
+            background: linear-gradient(-45deg, #f0fdf4, #e0f2fe, #ccfbf1, #f0fdfa);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
     </style>
 </head>
-<body class="bg-gray-50 flex items-center justify-center min-h-screen relative overflow-hidden">
+<body class="bg-animate flex items-center justify-center min-h-screen relative overflow-hidden">
 
-    <!-- Decorative Background Blobs (Abstract & Colorful) -->
+    <!-- Decorative Background Blobs (Kept for depth, floating over the gradient) -->
     <div class="absolute top-0 left-0 w-64 h-64 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
     <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
     <div class="absolute -bottom-32 left-20 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
@@ -68,28 +92,21 @@
     <!-- Main Content Card -->
     <main class="relative z-10 w-full max-w-2xl px-6 text-center">
         
-        <!-- Icon removed as requested -->
-
         <!-- Headline with Animation -->
         <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight text-gray-900 animate-text">
             চমৎকার কিছু <br>
-            <span class="text-gradient">অপেক্ষা করছে...</span>
+            <span class="text-gradient">
+                অপেক্ষা করছে<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+            </span>
         </h1>
 
         <!-- Subtitle/Description with Animation -->
         <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-lg mx-auto animate-text delay-100">
-            উম্মাহর জন্য নিরাপদ ও কল্যাণকর প্রযুক্তির এক নতুন দিগন্ত উন্মোচন করতে যাচ্ছি। ইহসানুল উম্মাহর সাথেই থাকুন।
+            আমরা উম্মাহর জন্য নিরাপদ ও কল্যাণকর প্রযুক্তির এক নতুন দিগন্ত উন্মোচন করতে যাচ্ছি। ইহসানুল উম্মাহর সাথেই থাকুন।
         </p>
 
         <!-- Divider with Animation -->
         <div class="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto rounded-full mb-10 animate-text delay-200"></div>
-
-        <!-- Contact Section Removed -->
-
-        <!-- Footer with Animation -->
-        <footer class="mt-16 text-sm text-gray-400 animate-text delay-300">
-            &copy; ২০২৫ ইহসানুল উম্মাহ। টেকনোলজি গাইডেড বাই ফেইথ।
-        </footer>
 
     </main>
 
