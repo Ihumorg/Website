@@ -3,380 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ইহসানুল উম্মাহ - প্রযুক্তিতে হালাল সমাধান</title>
-    <!-- Load Tailwind CSS -->
+    <title>শীঘ্রই আসছে | ইহসানুল উম্মাহ</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Google Font: Hind Siliguri (Great for Bangla) -->
+    <!-- Bangla Font: Hind Siliguri -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Apply the Bangla font */
         body {
             font-family: 'Hind Siliguri', sans-serif;
         }
-        /* Custom Cursor for Typewriter */
-        .cursor {
-            display: inline-block;
-            width: 3px;
-            background-color: #0f766e;
-            animation: blink 1s infinite;
+        /* Floating Animation for the Icon */
+        .float {
+            animation: float 3s ease-in-out infinite;
         }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        /* Gradient Text Background */
+        .text-gradient {
+            background: linear-gradient(to right, #0d9488, #0891b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 flex items-center justify-center min-h-screen relative overflow-hidden">
 
-    <!-- Header & Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-bold text-teal-700 flex items-center gap-2">
-                <span>ইহসানুল উম্মাহ</span>
-            </a>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-6 items-center">
-                <a href="#home" class="text-gray-600 hover:text-teal-700 font-medium">হোম</a>
-                <a href="#about" class="text-gray-600 hover:text-teal-700 font-medium">আমাদের সম্পর্কে</a>
-                <a href="#services" class="text-gray-600 hover:text-teal-700 font-medium">লক্ষ্য ও সেবা</a>
-                <a href="#faq" class="text-gray-600 hover:text-teal-700 font-medium">প্রশ্নাবলী (FAQ)</a>
-                <a href="#contact" class="bg-teal-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-teal-700 transition duration-300">
-                    যোগাযোগ
-                </a>
-            </div>
-            
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-        </nav>
+    <!-- Decorative Background Blobs (Abstract & Colorful) -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+    <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    <div class="absolute -bottom-32 left-20 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+
+    <!-- Main Content Card -->
+    <main class="relative z-10 w-full max-w-2xl px-6 text-center">
         
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg hidden transition-all duration-300">
-            <a href="#home" class="block px-6 py-3 text-gray-600 hover:bg-teal-50 border-b">হোম</a>
-            <a href="#about" class="block px-6 py-3 text-gray-600 hover:bg-teal-50 border-b">আমাদের সম্পর্কে</a>
-            <a href="#services" class="block px-6 py-3 text-gray-600 hover:bg-teal-50 border-b">লক্ষ্য ও সেবা</a>
-            <a href="#faq" class="block px-6 py-3 text-gray-600 hover:bg-teal-50 border-b">প্রশ্নাবলী (FAQ)</a>
-            <a href="#contact" class="block px-6 py-3 bg-teal-600 text-white font-medium text-center">যোগাযোগ করুন</a>
+        <!-- Animated Icon/Logo Area -->
+        <div class="flex justify-center mb-8">
+            <div class="bg-white p-5 rounded-2xl shadow-xl float">
+                <!-- Icon: Rocket or Code/Construction (Abstract) -->
+                <svg class="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                </svg>
+            </div>
         </div>
-    </header>
 
-    <!-- Main Content -->
-    <main>
-        
-        <!-- 1. Home Section with Dynamic Text -->
-        <section id="home" class="relative bg-teal-50 py-24 md:py-36 overflow-hidden">
-            <div class="container mx-auto px-6 text-center z-10 relative">
-                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">
-                    প্রযুক্তি হোক <span id="typewriter" class="text-teal-700"></span><span class="cursor">&nbsp;</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8 mt-6">
-                    কুরআন ও সুন্নাহর আলোকে প্রযুক্তি ব্যবহারের সঠিক দিকনির্দেশনা এবং মুসলিম উম্মাহর জন্য নিরাপদ ডিজিটাল টুলস তৈরির লক্ষ্যে আমরা কাজ করছি।
-                </p>
-                <div class="flex justify-center gap-4">
-                    <a href="#services" class="bg-teal-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-teal-700 transition shadow-lg">
-                        আমাদের সেবাসমূহ
-                    </a>
-                    <a href="#contact" class="bg-white text-teal-700 border border-teal-200 px-8 py-3 rounded-lg text-lg font-medium hover:bg-teal-50 transition shadow-sm">
-                        কথা বলুন
-                    </a>
+        <!-- Headline -->
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight text-gray-900">
+            চমৎকার কিছু <br>
+            <span class="text-gradient">অপেক্ষা করছে...</span>
+        </h1>
+
+        <!-- Subtitle/Description -->
+        <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-lg mx-auto">
+            আমরা উম্মাহর জন্য নিরাপদ ও কল্যাণকর প্রযুক্তির এক নতুন দিগন্ত উন্মোচন করতে যাচ্ছি। ইহসানুল উম্মাহর সাথেই থাকুন।
+        </p>
+
+        <!-- Divider -->
+        <div class="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 mx-auto rounded-full mb-10"></div>
+
+        <!-- Contact Section -->
+        <div class="bg-white/60 backdrop-blur-sm border border-white/50 p-6 rounded-2xl shadow-lg inline-block w-full max-w-md">
+            <h3 class="text-gray-800 font-semibold mb-2">যোগাযোগ করুন</h3>
+            <p class="text-sm text-gray-500 mb-4">যেকোনো জিজ্ঞাসা বা পরামর্শের জন্য মেইল করুন</p>
+            
+            <a href="mailto:contact@ihum.org" class="group flex items-center justify-between bg-white border border-gray-200 px-4 py-3 rounded-xl hover:border-teal-500 hover:shadow-md transition-all duration-300">
+                <div class="flex items-center gap-3">
+                    <div class="bg-teal-50 p-2 rounded-lg group-hover:bg-teal-100 transition">
+                        <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <span class="text-gray-700 font-medium group-hover:text-teal-700 transition">contact@ihum.org</span>
                 </div>
-            </div>
-        </section>
+                <svg class="w-5 h-5 text-gray-400 group-hover:text-teal-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
 
-        <!-- 2. About Section (আমাদের সম্পর্কে) -->
-        <section id="about" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 relative">
-                        <!-- Abstract Visual -->
-                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-teal-100 rounded-full opacity-50"></div>
-                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-teal-50 rounded-full opacity-50"></div>
-                        <div class="relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-                            <h3 class="text-2xl font-bold text-teal-800 mb-4">আমাদের পরিচয়</h3>
-                            <p class="text-gray-600 leading-relaxed mb-4">
-                                বর্তমান ডিজিটাল যুগে ফিতনা এবং অনৈতিকতা থেকে বেঁচে থাকা একটি বড় চ্যালেঞ্জ। 'ইহসানুল উম্মাহ' একটি অলাভজনক উদ্যোগ যা প্রযুক্তির এই চ্যালেঞ্জ মোকাবেলায় কাজ করছে।
-                            </p>
-                            <p class="text-gray-600 leading-relaxed">
-                                আমরা বিশ্বাস করি প্রযুক্তি মানুষের উপকারের জন্য, ক্ষতির জন্য নয়। তাই আমরা এমন সব টুলস এবং কন্টেন্ট তৈরি করি যা একজন মুমিনকে তার দ্বীন পালনে সাহায্য করে এবং হারাম থেকে বাঁচায়।
-                            </p>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2">
-                        <span class="text-teal-600 font-semibold uppercase tracking-wider text-sm">আমাদের মিশন</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
-                            নিরাপদ ও হালাল প্রযুক্তি নিশ্চিত করা
-                        </h2>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-teal-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span class="text-gray-700">কুরআন ও সুন্নাহর আলোকে গাইডলাইন প্রদান</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-teal-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span class="text-gray-700">বিজ্ঞাপন ও ট্র্যাকার মুক্ত অ্যাপ তৈরি</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-teal-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span class="text-gray-700">পরিবার ও শিশুদের জন্য নিরাপদ ইন্টারনেট</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Goal & Service Section (লক্ষ্য ও সেবা) -->
-        <section id="services" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">আমাদের লক্ষ্য ও সেবাসমূহ</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto mt-4">
-                        উম্মাহর কল্যাণে আমরা বিভিন্ন প্রজেক্ট ও সেবা প্রদান করে থাকি
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all border-t-4 border-teal-500">
-                        <div class="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6 text-teal-700">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">হালাল অ্যাপ ডেভেলপমেন্ট</h3>
-                        <p class="text-gray-600">
-                            আমরা এমন মোবাইল অ্যাপ তৈরি করি যা সম্পূর্ণ অ্যাড-ফ্রি এবং প্রাইভেসি ফ্রেন্ডলি। যেমন: কুরআন অ্যাপ, হাদিস রিডার ইত্যাদি।
-                        </p>
-                    </div>
-
-                    <!-- Service 2 -->
-                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all border-t-4 border-teal-500">
-                        <div class="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6 text-teal-700">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">কন্টেন্ট ফিল্টারিং</h3>
-                        <p class="text-gray-600">
-                            ইন্টারনেটের অশ্লীলতা থেকে বাঁচার জন্য আমরা ব্রাউজার এক্সটেনশন এবং ডিএনএস (DNS) ফিল্টার সেবা প্রদান করি।
-                        </p>
-                    </div>
-
-                    <!-- Service 3 (Kept the AI feature as a service) -->
-                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all border-t-4 border-teal-500">
-                        <div class="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6 text-teal-700">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">স্মার্ট দ্বীনি পরামর্শ</h3>
-                        <p class="text-gray-600">
-                            AI বা কৃত্রিম বুদ্ধিমত্তা ব্যবহার করে প্রযুক্তিগত ও নৈতিক বিভিন্ন প্রশ্নের তাৎক্ষণিক শরিয়াহ সম্মত গাইডলাইন প্রদান।
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. FAQ Section (সচরাচর জিজ্ঞাসিত প্রশ্ন) -->
-        <section id="faq" class="py-20 bg-white">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <div class="text-center mb-12">
-                    <span class="text-teal-600 font-semibold uppercase tracking-wider text-sm">জিজ্ঞাসা</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">সচরাচর জিজ্ঞাসিত প্রশ্ন</h2>
-                </div>
-
-                <div class="space-y-4">
-                    <!-- FAQ Item 1 -->
-                    <div class="border border-gray-200 rounded-lg overflow-hidden">
-                        <button class="faq-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none">
-                            <span class="font-semibold text-gray-800">আপনাদের অ্যাপগুলো কি বিনামূল্যে ব্যবহার করা যায়?</span>
-                            <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-content hidden px-6 py-4 bg-white text-gray-600">
-                            হ্যাঁ, আমাদের তৈরি করা সকল অ্যাপ এবং টুলস উম্মাহর জন্য সম্পূর্ণ বিনামূল্যে এবং বিজ্ঞাপনমুক্ত (Ad-free) রাখা হয়েছে।
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 2 -->
-                    <div class="border border-gray-200 rounded-lg overflow-hidden">
-                        <button class="faq-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none">
-                            <span class="font-semibold text-gray-800">আমি কি এই প্রজেক্টে অবদান রাখতে পারি?</span>
-                            <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-content hidden px-6 py-4 bg-white text-gray-600">
-                            অবশ্যই! আপনি যদি ডেভেলপার, ডিজাইনার বা কন্টেন্ট রাইটার হন, তবে আমাদের সাথে যোগাযোগ করে ভলান্টিয়ার হিসেবে কাজ করতে পারেন।
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 3 -->
-                    <div class="border border-gray-200 rounded-lg overflow-hidden">
-                        <button class="faq-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none">
-                            <span class="font-semibold text-gray-800">আপনারা কি ব্যক্তিগত বা কমার্শিয়াল ওয়েবসাইট তৈরি করেন?</span>
-                            <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-content hidden px-6 py-4 bg-white text-gray-600">
-                            বর্তমানে আমরা শুধুমাত্র কমিউনিটি ও অলাভজনক প্রজেক্টে ফোকাস করছি। তবে হালাল ও কল্যাণকর কোনো উদ্যোগ হলে আমরা বিবেচনা করতে পারি।
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Contact Info & Social Link (যোগাযোগ) -->
-        <section id="contact" class="py-20 bg-teal-900 text-white">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row gap-12">
-                    <!-- Contact Info & Socials -->
-                    <div class="md:w-1/2">
-                        <h2 class="text-3xl font-bold mb-6">আমাদের সাথে যোগাযোগ করুন</h2>
-                        <p class="text-teal-100 mb-8 leading-relaxed">
-                            যেকোনো পরামর্শ, জিজ্ঞাসা বা সহযোগিতার জন্য আমাদের সাথে যোগাযোগ করতে পারেন। আমরা শীঘ্রই আপনার বার্তার উত্তর দেওয়ার চেষ্টা করব, ইনশাআল্লাহ।
-                        </p>
-                        
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-teal-800 rounded-full flex items-center justify-center">
-                                    <svg class="w-5 h-5 text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                </div>
-                                <span>contact@ihum.org</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-teal-800 rounded-full flex items-center justify-center">
-                                    <svg class="w-5 h-5 text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                </div>
-                                <span>ঢাকা, বাংলাদেশ</span>
-                            </div>
-                        </div>
-
-                        <!-- Social Links -->
-                        <div>
-                            <h4 class="text-sm font-bold uppercase text-teal-400 mb-4 tracking-wider">সোশ্যাল মিডিয়া</h4>
-                            <div class="flex gap-4">
-                                <!-- Facebook -->
-                                <a href="#" class="w-10 h-10 bg-teal-800 hover:bg-white hover:text-teal-900 rounded-lg flex items-center justify-center transition duration-300">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                                </a>
-                                <!-- Hikmah.net -->
-                                <a href="https://hikmah.net" target="_blank" class="w-10 h-10 bg-teal-800 hover:bg-white hover:text-teal-900 rounded-lg flex items-center justify-center transition duration-300" title="Hikmah.net">
-                                    <!-- Book Icon representing Wisdom/Hikmah -->
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Simple Form -->
-                    <div class="md:w-1/2">
-                        <form class="bg-teal-800 p-8 rounded-xl shadow-lg border border-teal-700">
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium mb-2 text-teal-200">আপনার নাম</label>
-                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-teal-900 border border-teal-600 text-white focus:outline-none focus:ring-1 focus:ring-teal-400 placeholder-teal-600/50" placeholder="নাম লিখুন">
-                            </div>
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium mb-2 text-teal-200">ইমেইল</label>
-                                <input type="email" class="w-full px-4 py-3 rounded-lg bg-teal-900 border border-teal-600 text-white focus:outline-none focus:ring-1 focus:ring-teal-400 placeholder-teal-600/50" placeholder="ইমেইল ঠিকানা">
-                            </div>
-                            <div class="mb-6">
-                                <label class="block text-sm font-medium mb-2 text-teal-200">বার্তা</label>
-                                <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-teal-900 border border-teal-600 text-white focus:outline-none focus:ring-1 focus:ring-teal-400 placeholder-teal-600/50" placeholder="আপনার মতামত লিখুন..."></textarea>
-                            </div>
-                            <button type="button" class="w-full bg-white text-teal-800 font-bold py-3 rounded-lg hover:bg-teal-50 transition">
-                                পাঠিয়ে দিন
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Footer -->
+        <footer class="mt-16 text-sm text-gray-400">
+            &copy; ২০২৫ ইহসানুল উম্মাহ। টেকনোলজি গাইডেড বাই ফেইথ।
+        </footer>
 
     </main>
-    
-    <!-- 6. Footer Section -->
-    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0 text-center md:text-left">
-                    <h3 class="text-xl font-bold text-white mb-2">ইহসানুল উম্মাহ</h3>
-                    <p class="text-sm text-gray-500">প্রযুক্তিতে হালাল ও নিরাপদ সমাধান।</p>
-                </div>
-                <div class="flex space-x-6 text-sm">
-                    <a href="#" class="hover:text-teal-400 transition">প্রাইভেসি পলিসি</a>
-                    <a href="#" class="hover:text-teal-400 transition">শর্তাবলী</a>
-                </div>
-            </div>
-            <div class="mt-8 text-center text-xs text-gray-600 border-t border-gray-800 pt-8">
-                &copy; ২০২৫ ইহসানুল উম্মাহ। সর্বস্বত্ব সংরক্ষিত।
-            </div>
-        </div>
-    </footer>
 
-    <!-- JavaScript logic -->
-    <script>
-        // Mobile Menu Toggle
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // FAQ Toggle Logic
-        const faqButtons = document.querySelectorAll('.faq-btn');
-        faqButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const content = btn.nextElementSibling;
-                const icon = btn.querySelector('svg');
-                
-                // Toggle current
-                content.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
-            });
-        });
-
-        // Typewriter Effect Logic
-        const textElement = document.getElementById('typewriter');
-        const phrases = [
-            "হালাল।", 
-            "নিরাপদ।", 
-            "উম্মাহর জন্য।", 
-            "কল্যাণকর।"
-        ];
-        
-        let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typeSpeed = 100;
-
-        function type() {
-            const currentPhrase = phrases[phraseIndex];
-            
-            if (isDeleting) {
-                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
-                charIndex--;
-                typeSpeed = 50; // Deleting speed
-            } else {
-                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
-                charIndex++;
-                typeSpeed = 150; // Typing speed
-            }
-
-            if (!isDeleting && charIndex === currentPhrase.length) {
-                isDeleting = true;
-                typeSpeed = 2000; // Pause at end
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-                typeSpeed = 500; // Pause before new word
-            }
-
-            setTimeout(type, typeSpeed);
-        }
-
-        // Start typing on load
-        document.addEventListener('DOMContentLoaded', type);
-    </script>
 </body>
 </html>
