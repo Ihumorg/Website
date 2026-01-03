@@ -113,5 +113,15 @@
 
     </main>
 
+    <!-- Footer moved outside main content to stay at the absolute bottom -->
+    <footer class="absolute bottom-6 w-full text-center text-sm text-gray-500 font-medium animate-text delay-300 z-20">
+        &copy; <span id="year"></span> Ihsanul Ummah. All Rights Reserved.
+    </footer>
+
+    <script>
+        // Automatically set the current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
